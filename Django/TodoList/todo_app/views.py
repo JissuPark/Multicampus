@@ -5,7 +5,7 @@ from django.urls import reverse
 # url = /
 def index(request):
     _todos = Todo.objects.all()
-    return render(request, 'index.html', {'todos': _todos})
+    return render(request, 'todo_app/index.html', {'todos': _todos})
 
 
 # url = /create_todo
