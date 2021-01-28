@@ -1,0 +1,91 @@
+table 			      {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background:white;
+  border-radius:6px;
+  overflow:hidden;
+  max-width:800px;
+  width:100%;
+  margin:0 auto;
+  position:relative;
+
+  *               { position:relative }
+
+  td,th           { padding-left:8px}
+
+  thead tr        {
+    height:60px;
+    background:#FFED86;
+    font-size:16px;
+  }
+
+  tbody tr        { height:48px; border-bottom:1px solid #E3F1D5 ;
+    &:last-child  { border:0; }
+  }
+
+ 	td,th 					{ text-align:left;
+		&.l 					{ text-align:right }
+		&.c 					{ text-align:center }
+		&.r 					{ text-align:center }
+	}
+}
+
+table thead tr th {
+height:60px;
+background:#FFED86!important;
+font-size:20px;
+}
+
+
+button,
+button::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+button {
+  background: none;
+  border: 3px solid #000;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+}
+
+button::before,
+button::after {
+  background: #fff;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.btn-add:hover {
+  border-color:#2ecc71;
+  color: #2ecc71;
+}
+
+.btn-udt:hover {
+  border-color:#4863FA;
+  color: #4863FA;
+}
+.btn-dlt:hover {
+  border-color:#F53627;
+  color: #F53627;
+}
+/* BUTTON 3 */
+.btn-add::after {
+  height: 0;
+  left: 50%;
+  top: 50%;
+  width: 0;
+}
+
+.btn-add:hover:after {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}

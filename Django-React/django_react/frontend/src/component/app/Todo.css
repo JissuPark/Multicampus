@@ -1,0 +1,95 @@
+.todoheader{
+text-align:center;
+}
+
+.inputBox {
+    background: #fff;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+}
+
+.inputBox input {
+    border-style: none;
+    font-size: .9rem;
+    height: 100% !important;
+}
+.inputBox div{
+height: 50px;
+}
+
+.shadow {
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, .03);
+}
+
+.addContainer {
+    float: right;
+    background: linear-gradient(90deg, #6478fb, #8763fb);
+    display: inline-block;
+    width: 3rem;
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+    border-color: transparent;
+}
+
+.addBtn {
+    color: #fff;
+    vertical-align: middle;
+}
+
+.fa-plus{
+    content: "\f067" !important;
+}
+
+
+.removeBtn {
+margin-left: auto;
+color: #de4343;
+background-color: transparent;
+border-color: transparent;
+}
+
+.fa {
+display: inline-block;
+font: normal normal normal 14px/1 FontAwesome;
+font-size: inherit;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.fa-trash-o{
+content: "\f014";
+}
+
+.clearAllBtn {
+color: #e20303;
+display: block;
+}
+
+.clearAllContainer {
+width: 8.5rem;
+height: 50px;
+line-height: 50px;
+background-color: #fff;
+border-radius: 5px;
+margin: 0 auto;
+}
+
+.todoul {
+list-style-type: none;
+padding-left: 0;
+margin-top: 0;
+text-align: left;
+}
+
+.todoli {
+display: flex;
+min-height: 50px;
+height: 50px;
+line-height: 50px;
+margin: .5rem 0;
+padding: 0 .9rem;
+background: #fff;
+border-radius: 5px;
+}
