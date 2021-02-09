@@ -44,7 +44,7 @@ class Todo extends Component {
 
     // 여기가 django 서버에서 url로 데이터 받아오는 부분
     getpost = async() => {
-        const {data} = await axios.get('http://localhost:8000/Todo/');
+        const {data} = await axios.get('http://localhost:9412/Todo/');
         this.setState({posts:{data}.data});
     }
     async componentDidMount(){

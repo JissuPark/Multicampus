@@ -13,7 +13,7 @@ class Gugudan extends Component {
 
 
     getpost = async() => {
-        const {data}= await axios.get('http://127.0.0.1:8000/Gugudan');
+        const {data}= await axios.get('http://127.0.0.1:9412/Gugudan');
         this.setState({dans:{data}.data});
     }
 

@@ -19,7 +19,7 @@ class App extends Component  {
         };
     }
     getpost = async() => {
-        const {data}= await axios.get('http://127.0.0.1:8000/');
+        const {data}= await axios.get('http://127.0.0.1:9412/');
         this.setState({posts:{data}.data});
         this.setState({isloading: false});
     }
