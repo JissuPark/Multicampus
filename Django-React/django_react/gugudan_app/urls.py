@@ -1,7 +1,8 @@
 from django.urls import path
-from . import views
+from .views import gugulist
 
 
 urlpatterns = [
-    path('', views.GuGudanListCreate.as_view()),
+    # path('', views.GuGudanListCreate.as_view()),
+    path('', gugulist, name="list")
 ]

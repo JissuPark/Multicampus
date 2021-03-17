@@ -17,7 +17,7 @@ class Student extends Component{
         }
     }
     getstd = async() =>{
-        await axios.get('Student')
+        await axios.get('/Student/')
             .then(res=>{this.setState({students: res.data}); });
     }
     componentDidMount(){
@@ -33,7 +33,7 @@ class Student extends Component{
     }
     addstd = async() =>{
         const {number, name, age, major} = this.state;
-        await axios.post('Student/', {number, name, age, major})
+        await axios.post('/Student/', {number, name, age, major})
             .then(res=>{
                 console.log(res);
                 if (res.status === 201){

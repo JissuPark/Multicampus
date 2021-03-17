@@ -22,14 +22,14 @@ class Todo extends Component {
         return (
         <ul className='todoul'>
             {list.map(item => (
-                <Form key={item.id} method="POST" onSubmit={this.rmvlist} >
+                <Form key={item.id} method="POST"id={item.id} onSubmit={this.rmvlist} >
                     <li  className='todoli shadow' >
                             { item.title }
                             <button
                                 type="submit"
                                 className="removeBtn"
                                 name='rmvnum'
-                                id={item.id}
+
                                 onClick={this.onclick}
                                 >
                                 <i aria-hidden='true' className='fa fa-trash-o'>X</i>
@@ -44,7 +44,7 @@ class Todo extends Component {
 
     // 여기가 django 서버에서 url로 데이터 받아오는 부분
     getpost = async() => {
-        const {data} = await axios.get('http://localhost:9412/Todo/');
+        const {data} = await axios.get('/Todo/');
         this.setState({posts:{data}.data});
     }
     async componentDidMount(){
@@ -53,16 +53,16 @@ class Todo extends Component {
 
     addlist = async(e) =>{
         e.preventDefault();
-        const {data} = await axios.post('/Todo/create/', {'addname':this.state.addname});
+        const {data} = await axios.post('/Todo/create/', {'title':this.state.addname});
         this.setState({posts:{data}.data});
-        this.displaylist();
+        //this.displaylist();
 
     }
     rmvlist = async(e) =>{
-        e.preventDefault();
-        const {data} = await axios.post('/Todo/delete/', {'rmvnum':this.state.rmvnum});
+        e.preventDefault();console.log(e.target);
+        const {data} = await axios.delete('/Todo/delete/'+e.target.id);
         this.setState({posts:{data}.data});
-        this.displaylist();
+        //this.displaylist();
     }
 
     onchange = (e)=>{

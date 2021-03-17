@@ -5,4 +5,4 @@ from .models import GuGudan
 class GuGudanSerializer(serializers.ModelSerializer):
     class Meta:
         model = GuGudan
-        fields = ('id', 'dan')
+        fields = ['id', 'dan']
